@@ -1,11 +1,6 @@
-import csv
-import re
+import csv as csv
 
-f = open('test.txt', 'wb')
-try:
-    spamwriter = csv.writer(f)
-    spamwriter.writerow(('Number', 'String'))
-    
-
-input('press 1')
-input('press b')
+f = open('test.csv', 'r+')
+spamreader = csv.reader(f, delimiter=' ')
+for line in spamreader:
+    print line
